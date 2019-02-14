@@ -5,6 +5,6 @@ var e
 e = document.getElementById("edad").value;
 if(e >= 13 && e <= 17)
 {
-	alert("sos adolecente");
+	alert("sos adolescente");
 }
 }//FIN DE LA FUNCIÓN

@@ -1,0 +1,32 @@
+
+EMPLEADO.C:
+
+
+void bajaEmpleado(eEmpleado vec[], int tam)
+    {
+        int legajo;
+        int esta;
+        //int indice;
+        printf("Ingrese legajo: ");
+        scanf("%d", &legajo);
+        esta = buscarEmpleado(vec, tam, legajo);
+        if (esta == -1)
+            {
+                printf("No existe un usuario con el numero de legajo %d", legajo);
+            }
+            else
+            {
+               vec[esta].ocupado = 0;
+               printf("La baja se realizo correctamente");
+            }
+
+    }
+
+EMPLEADO.H:
+
+void bajaEmpleado(eEmpleado vec[], int tam);
+
+MAIN.C:
+ bajaEmpleado(lista, TAM);
+            system("pause");
+            break;

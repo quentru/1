@@ -2,8 +2,8 @@
 #include <stdlib.h>
 int main()
 {
-    //int valor;
-    char valor;
+    int valor;
+    /*char valor;
     printf("Ingrese un caracter\n");
     fflush(stdin);
     scanf("%c", &valor);
@@ -37,12 +37,13 @@ int main()
     case '22':
     case '23':
         printf("cualquier cosa");
-        break;*/
+        break;
+        //No lee 2 caracteres juntos por eso llega hasta el 8 y el 9 entra como default
     default:
         printf("Esta hora no existe");
         break;
-    }
-    /*printf("Ingrese la hora\n");
+    }*/
+    printf("Ingrese la hora\n");
     scanf("%d",&valor);
     switch(valor)
     {
@@ -59,7 +60,7 @@ int main()
     case 8:
     case 9:
     printf("Buenos dias");
-        break;
+    break;
     case 10:
     case 11:
     case 12:
@@ -79,7 +80,7 @@ int main()
     default:
         printf("Esta Hora no existe");
         break;
-    }*/
+    }
 }
 //#include<ctype.h>//trabaja con tipos
 //rta=toupper();//para que acepte minusculas

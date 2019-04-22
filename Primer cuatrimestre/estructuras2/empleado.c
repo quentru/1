@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <conio.h>
 #include "empleado.h"
+
 void inicializarEmpleados(eEmpleado vec[], int tam)
 {
 
@@ -29,13 +30,14 @@ int menu()
 
     return opcion;
 }
-void mostrarEmpleado(eEmpleado emp){
-
-    printf("   %d    %s  %c  %.2f  %d %d %d\n", emp.legajo, emp.nombre, emp.sexo, emp.sueldo, emp.fechaNac.dia, emp.fechaNac.mes, emp.fechaNac.anio);
+void mostrarEmpleado(eSector sectores[], int tam, eEmpleado emp){
+char nombreSector[20];
+    obtenerSector(sectores, tam, emp.idSector, nombreSector);
+    printf("   %d    %s  %c  %.2f  %d %d %d %s\n", emp.legajo, emp.nombre, emp.sexo, emp.sueldo, emp.fechaNac.dia, emp.fechaNac.mes, emp.fechaNac.anio, nombreSector);
 
 }
 
-void mostrarEmpleados(eEmpleado vec[], int tam){
+void mostrarEmpleados(eSector sectores, eEmpleado vec[], int tam){
     int contador = 0;
 
     printf(" Legajo   Nombre  Sexo  Sueldo   Fecha de nacimiento\n\n");
@@ -135,6 +137,19 @@ else{
 
      }
 
+    }
+
+
+    void obtenerSector(eSector sectores[], int tam, int idSectores, char desc[])
+    {
+        for(int i; i<tam; i++)
+            {
+                if(sectores[i].id == idSectores[i])
+                    {
+                        strcpy(desc, sectores[i].descrpcion);
+                        break;
+                    }
+            }
     }
 }
 

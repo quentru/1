@@ -1,6 +1,18 @@
+init(eSector sectores[], int cantidad);//prototipo
+init(sectores);//llamada
+void init(eSector sectores[], int cantidad);
+init(sectores, cant_sector);
+void init(eSector sectores[], int cantidad);
+eSector sec[]={};
+for(i=0;i<cantidad;i++)
+{
+	sectores[i].id=sec[i].id;
+	strcpy(sectores[i].descripcion, sec[i].descripcion);
+}
+
 Desarrollar en ANSI C:
 Una empresa necesita administrar los 20 almuerzos de su comedor en planta, para sus 100 empleados; y para ello se deberá realizar un programa de acuerdo a lo siguiente:
-
+menu son 10.
 	Menu:
 •	Código de menu (autoincremental)
 •	Descripción (máximo 51 caracteres)  Validar
@@ -22,7 +34,7 @@ Almuerzo:
 •	Legajo de empleado (debe existir) Validar
 •	Fecha (el dia, mes y año debe estar en los rangos correspondientes) Validar
 
-	Sector:
+Sector:
 •	id (autoincremental)
 •	Descripción (máximo 51 caracteres)  Validar
 

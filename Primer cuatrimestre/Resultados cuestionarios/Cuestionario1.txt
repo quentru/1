@@ -1,0 +1,72 @@
+Las computadoras procesan los datos bajo el control de conjuntos de instrucciones llamados
+Seleccione una:
+a. ordenes 
+b. sentencias 
+c. algoritmos 
+d. programas 
+Retroalimentación
+Respuesta incorrecta.
+La respuesta correcta es: programas
+
+
+
+
+
+
+Pregunta 2
+Correcta
+Puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+A los programas que traducen programas escritos en un lenguaje de alto nivel a lenguaje máquina se les llama
+Seleccione una:
+a. intérpretes 
+b. editores 
+c. enlazadores 
+d. compiladores 
+Retroalimentación
+Respuesta correcta
+La respuesta correcta es: compiladores
+Pregunta 3
+Correcta
+Puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+Los programas en C, se introducen a la computadora me diante el uso de un programa llamadodevelope?
+Seleccione una:
+a. enlazador 
+b. compilador 
+c. editor 
+d. preprocesador 
+Retroalimentación
+Respuesta correcta
+La respuesta correcta es: editor
+Pregunta 4
+Correcta
+Puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+El programa que combina la salida del compilador con varias bibliotecas de funciones para producir una imagen ejecutable se denomina
+ 
+Seleccione una:
+a. compilador 
+b. intérprete 
+c. enlazador 
+d. editor 
+Retroalimentación
+Respuesta correcta
+La respuesta correcta es: enlazador
+Pregunta 5
+Correcta
+Puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+Un compilador traduce programas en un lenguaje de alto nivel a código
+Seleccione una:
+a. ejecutable 
+b. interpretado 
+c. objeto 
+d. fuente 
+Retroalimentación
+Respuesta correcta
+La respuesta correcta es: objeto

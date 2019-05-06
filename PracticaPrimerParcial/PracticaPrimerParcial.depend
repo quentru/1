@@ -3,3 +3,48 @@
 	<stdio.h>
 	<stdlib.h>
 
+1557083535 source:c:\users\usuario\desktop\1\practicaprimerparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+
+1557125246 source:c:\santi\1\practicaprimerparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"empleado.h"
+
+1557123955 source:c:\santi\1\practicaprimerparcial\input.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"input.h"
+
+1557123955 c:\santi\1\practicaprimerparcial\input.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+
+1557125245 source:c:\santi\1\practicaprimerparcial\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"empleado.h"
+
+1557125038 c:\santi\1\practicaprimerparcial\empleado.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+

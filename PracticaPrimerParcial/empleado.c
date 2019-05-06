@@ -4,187 +4,7 @@
 #include <ctype.h>
 #include <conio.h>
 #include "empleado.h"
-#define TAM 5
-#define TAMSEC 5
-#define TAMMENU 10
-#define TAMALMUERZO 20
-
-/*typedef struct
-{
-    int id;
-    char descripcion[100];
-}eSector;
-
-typedef struct
-{
-    int codigoMenu;
-    char descripcion[100];
-    float importe;
-    int isEmpty;
-}eMenu;
-
-
-
-typedef struct
-{
-    int dia;
-    int mes;
-    int anio;
-}eFecha;
-
-
-typedef struct
-{
-    int codigoAlmuerzo;
-    int indiceMenu;
-    int legajoEmpleado;
-    int isEmpty;
-    eFecha fechaAlmuerzo;
-}eAlmuerzo;
-
-
-typedef struct
-{
-    int legajo;
-    char nombre[20];
-    char apellido[20];
-    char sexo;
-    int salario;
-    int idSector;
-    int isEmpty;
-    eFecha fechaIngreso;
-
-}eEmpleado;
-
-int menu();
-void init(eSector sectores[], int cant);//prototipo
-void inicializarEmpleado(eEmpleado vec[], int tam);
-void mostrarEmpleado(eSector sectores[], int tam, eEmpleado vec);
-void mostrarEmpleados(eEmpleado vec[], int tam, eSector sectores[], int tamSector);
-int buscarLibre(eEmpleado vec[], int tam);
-int buscarEmpleado(eEmpleado vec[], int tam, int legajo);
-void altaEmpleado(eEmpleado vec[], int tam, eSector sectores[], int tamSector);
-void bajaEmpleado(eEmpleado vec[], int tam, eSector sectores[], int tamSector);
-void ModificarEmpleado(eEmpleado vec[], int tam, eSector sectores[], int tamSector);
-int obtenerSector(eSector sectores[], int tam, int idSector, char desc[]);
-void mostrarSectoresConEmpleados(eEmpleado empleados[], int tam, eSector sectores[], int tamSec);
-void mostrarCantEmpleadosXSector(eEmpleado empleados[], int tam, eSector sectores[], int tamSec);
-void inicializarMenus(eMenu vec[], int tammenu);
-void mostrarMenu(eMenu vec[], int indice);
-int buscarLibreMenus(eMenu vec[], int tammenu);
-void altaMenu(eMenu vec[], int tammenu);
-void ModificarMenu(eMenu vec[], int tammenu);
-void obtenerMenu(eMenu vec[],int tammenu, int codigoMenu, char descripcionMenu[],int indice);
-void obtenerEmpleado(eEmpleado vec[],int tam, int legajo, char apellido[], int indice);
-void altaAlmuerzos(eAlmuerzo almuerzo[], int tamAlmuerzo);
-int buscarLibreAlmuerzo(eAlmuerzo almuerzo[],int tamAlmuerzo);
-void inicializarAlmuerzo(eAlmuerzo almuerzo[],int tamAlmuerzo);
-void mostrarAlmuerzo(eAlmuerzo almuerzo[],int tamAlmuerzo,eEmpleado vec[], int tam,eMenu menu[], int tammenu);*/
-int main()
-{
-    int confirma;
-    int seguir = 's';
-    eAlmuerzo almuerzos[TAMALMUERZO];
-    eMenu menus[TAMMENU];
-    eSector sector[TAMSEC];
-    eEmpleado lista[TAM];
-    init(sector, TAMSEC);
-    inicializarEmpleado(lista, TAM);
-    inicializarMenus(menus, TAMMENU);
-    inicializarAlmuerzo(almuerzos, TAMALMUERZO);
-    //={{1, "RRHH"},{ 2, "Sistemas"},{3, "Ventas"},{4,"Logistica"}};
-    //eMenu menus[]={{1, "Sopa", 30},{ 2, "Fideos", 50},{3, "Pan con manteca", 10},{4,"ensalada", 50},{5,"paty", 60},{6,"albondigas", 100},{7,"sanguche",10},{8,"guiso", 5},{9,"asado", 500},{10,"pescado", 50}};
-    do
-    {
-        switch(menu())
-        {
-
-        case 1:
-            altaEmpleado(lista, TAM, sector, TAMSEC);
-            system("pause");
-            break;
-            //printf("\nAlta empleado\n\n");
-            //altaEmpleado(lista, TAM, sectores, TAMSEC);
-            //system("pause");
-            //for(int i=0;i<CANTIDAD;i++)
-                //{
-                  //  printf("%d %s\n\n",sector[i].id, sector[i].descripcion);
-                //}
-                //system("pause");
-            break;
-
-        case 2:
-            bajaEmpleado(lista, TAM, sector, TAMSEC);
-            system("pause");
-            break;
-
-        case 3:
-            ModificarEmpleado(lista, TAM, sector, TAMSEC);
-            system("pause");
-            break;
-
-        case 4:
-            printf("\nOrdenar empleados\n\n");
-            system("pause");
-            break;
-
-        case 5:
-            mostrarEmpleados(lista, TAM, sector, TAMSEC);
-            system("pause");
-            break;
-
-        case 6:
-            mostrarSectoresConEmpleados(lista, TAM, sector, TAMSEC);
-            system("pause");
-            break;
-        case 7:
-            mostrarCantEmpleadosXSector(lista, TAM, sector, TAMSEC);
-            system("pause");
-            break;
-
-        case 8:
-            altaMenu(menus, TAMMENU);
-            system("pause");
-            break;
-
-
-        case 9:
-            ModificarMenu(menus, TAMMENU);
-            system("pause");
-            break;
-
-        case 10:
-            altaAlmuerzos(almuerzos,TAMALMUERZO);
-            system("pause");
-            break;
-
-         case 11:
-            mostrarAlmuerzo(almuerzos,TAMALMUERZO,lista,TAM,menus,TAMMENU);
-            system("pause");
-            break;
-
-        case 12:
-            printf("\nConfirma salida s/n?: ");
-            fflush(stdin);
-            confirma = getche();
-
-            if( tolower(confirma) == 's')
-            {
-                seguir = 'n';
-            }
-            break;
-
-        default:
-            printf("\n Opcion invalida\n\n");
-            system("break");
-        }
-    }
-    while(seguir == 's');
-
-    return 0;
-}
-
-/*int menu()
+int menu()
 {
     int opcion;
 
@@ -291,7 +111,7 @@ else{
         printf("Existe un empleado de legajo %d en el sistema\n", legajo);
         mostrarEmpleado(sectores, tamSector ,vec[esta]);
      }
-     else{
+     else{*/
         //vec[indice].legajo = legajo;
         contador=indice+1;
         vec[indice].legajo = contador;
@@ -367,7 +187,7 @@ void bajaEmpleado(eEmpleado vec[], int tam, eSector sectores[], int tamSector)
                         case 'n':
                         break;
                     }*/
-               /* }else
+                }else
                 {
                     printf("No existe un empleado con ese legajo\n");
                 }
@@ -705,4 +525,3 @@ eSector sec[]={{1,"RRHH"},{2,"Ventas"},{3,"Logistica"},{4,"Computacion"},{5,"Com
     }
 }
 
-*/

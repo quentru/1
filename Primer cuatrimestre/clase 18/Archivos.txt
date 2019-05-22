@@ -1,0 +1,35 @@
+Hay dos tipos de archivos 
+Binario y de Texto
+los archivos binarios solo trabajan caracteres
+los de texto con cadenas de texto 
+texto plano(lo que se escribe y con un editor de texto se puede visualizar):Es un archivo de tipo texto
+Los archivos binarios van a estar asociados a estructuras es decir a registros
+los programas son aquellos encargados de leer y procesar archivos de tipo binario
+MEMORIA AL DISCO ESCRITURA
+DISCO A LA MEMORIA LECTURA
+fopen() se usa para abrir el archivo
+devuelve NULL si no encuentra el archivo
+feof() se usa para saber o verificar si llegamos al final del archivo 1:llego 0:no llego
+frewind() se usa para volver a la primera posicion del archivo
+fseek() sirve para moverse a donde cualquiera quiera en el archivo
+ftell() sirve para saber la cantidad de bytes que hay entre el señalador y el final del archivo
+fscanf() obtener un dato desde la lectura de un archivo y ese dato se asigna a una variable
+sprinf() escribir y sobrescribir un archivo, la salida es en un archivo y no en pantalla 
+Existe la estructura FILE y se escribe SI O SI CON MAYUSCULA!!!Y ES NECESARIA PARA TRABAJAR CON ARCHIVOS
+SE NECESITAN LA MISMA CANTIDAD DE PUNTEROS A FILE COMO ARCHIVOS CON LOS QUE SE TRABAJARA
+Modo Detalle
+r Abre un archivo de texto para operaciones de lectura.
+w Abre un archivo de texto para operaciones de escritura
+a Abre un archivo de texto para añadir datos.
+rb Abre un archivo binario para operaciones de lectura.
+wb Abre un archivo binario para operaciones de escritura.
+ab Abre un archivo binario para añadir datos.
+r+b Abre un archivo binario para operaciones de lectura escritura.
+w+b Abre un archivo binario para operaciones de lectura escritura.
+a+b Abre un archivo binario para operaciones de lectura escritura.
+r+ Abre un archivo de texto para operaciones de lectura escritura.)
+w+ Abre un archivo de texto para operaciones de lectura escritura )crea archivos si no son existenes , si son existentes
+DIRECTAMENTE SE SOBREESCRIBE
+ 
+
+

@@ -6,6 +6,11 @@
 
 int main()
 {
+    char email[52];
+    int anio;
+    int mes;
+    int dia;
+    char numero, caracter;
     char genero;
     int edad;
     float precio;
@@ -15,6 +20,13 @@ int main()
 
 
    // EJEMPLO DE USO DE getInt
+   /*r = isChar(&caracter,"Ingresa un caracte", "Eso no es un caracter papa");
+        if(r == 0)
+        printf("\n CARACTER: %c\n",caracter);*/
+
+
+        getEmail(&email,  "Ingrese su Email",  "Error al validar compruebe el largo del Email", 0, 51 );
+
    printf("la edad es: %d\n", edad);
     r = getInt(&edad,"¿Cual es tu edad?","Rango valido [0 - 100]",1,100);
     if(r == 0){
@@ -42,6 +54,10 @@ int main()
     r = getGenre(&genero , "Ingrese su sexo: ", "Su sexo debe ingresarse con los caracters m o f", 'm', 'f');
     if(r == 0)
         printf("\n genero: %c\n",genero);
+
+        r = getDate(&anio,  &mes, &dia, "ingreso", 1930, 2019);
+        if(r == 0)
+        printf("\n genero: %d %d %d\n",anio,mes,dia);
 
     return 0;
 }

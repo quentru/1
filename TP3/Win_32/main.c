@@ -21,15 +21,24 @@
 
 int main()
 {
+    char continuar='s';
     int option = 0;
     LinkedList* listaEmpleados = ll_newLinkedList();
-    do{
+    while(continuar=='s'){
+    printf("Ingrese una opcion\n");
+    scanf("%d", &option);
         switch(option)
         {
             case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
+                if(controller_loadFromText("data.csv",listaEmpleados))
+                    {
+                        printf("se leyo correctamente\n");
+                    }
+                break;
+            case 2:
+                continuar='n';
                 break;
         }
-    }while(option != 10);
+        }
     return 0;
 }
